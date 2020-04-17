@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1>Django Image Uploading</h1>
+<ul>
+    {% for post in object_list %}
+        <h2>{{ post.name }}</h2>
+        <img src="{{ post.cover.url }}" alt="{{ post.name }}">
+    {% endfor %}
+</ul>
+<a href="{% url 'image:upload' %}">Upload Page</a>
+</body>
+</html>
